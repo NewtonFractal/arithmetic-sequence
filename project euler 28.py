@@ -2,7 +2,7 @@ import numpy as np
 import math
 
 coefficients = []
-seq = [1, 25, 101, 261, 537]
+seq = [5,8,17,32]
 save = [seq[0]]
 
 def matrix_generator(dim):
@@ -15,7 +15,7 @@ def matrix_generator(dim):
                 return empty_matrix
             else:
                 empty_matrix[x, y] = empty_matrix[x - 1, y + 1] - empty_matrix[x - 1, y]
-    coefficients.append(str((empty_matrix[dim-2, 0])/math.factorial(dim-2))+"_"+str(dim-2))
+    coefficients.append(str((empty_matrix[dim-2, 0])/math.factorial(dim-2))+"x^"+str(dim-2))
     return empty_matrix
 
 matrix = matrix_generator(len(seq))
