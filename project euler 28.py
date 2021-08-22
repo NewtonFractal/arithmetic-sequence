@@ -2,7 +2,7 @@ import numpy as np
 import math
 
 coefficients = []
-seq = [5,8,17,32]
+seq = [1,25,101,261,537]
 save = [seq[0]]
 
 def matrix_generator(dim):
